@@ -16,11 +16,19 @@ class App extends Component {
       .then(characters => this.setState({ characters: characters }))
   }
 
+  addFavorite = (character) => {
+    console.log('add favorite', character)
+    this.setState({favorites: [...this.state.favorites, character] })
+  }
+
   render() {
     return (
       <div className="App">
         <FavoritesContainer favorites={this.state.favorites}/>
-        <CharactersContainer characters={this.state.characters} />
+        <CharactersContainer 
+          characters={this.state.characters} 
+          addFavorite={this.addFavorite}  
+        />
         
       </div>
     );

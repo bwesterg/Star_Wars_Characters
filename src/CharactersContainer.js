@@ -4,7 +4,11 @@ function CharactersContainer(props) {
 
     const displayCharacters = () => {
         return props.characters.map(character => {
-            return <CharacterCard character={character} />
+            return <CharacterCard 
+                key={character.id}
+                character={character} 
+                addFavorite={props.addFavorite} 
+            />
         })
     }
 
