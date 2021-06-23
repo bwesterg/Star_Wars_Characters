@@ -16,9 +16,8 @@ class App extends Component {
       .then(characters => this.setState({ characters: characters }))
   }
 
-  addFavorite = (character) => {
-    console.log('add favorite', character)
-    this.setState({favorites: [...this.state.favorites, character] })
+  addFavorite = clickedCharacter => {
+    this.setState({favorites: [...this.state.favorites, clickedCharacter] })
   }
 
   render() {

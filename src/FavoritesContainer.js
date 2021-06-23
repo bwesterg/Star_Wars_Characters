@@ -1,11 +1,12 @@
 import CharacterCard from "./CharacterCard"
 
 function FavoritesContainer(props) {
-    console.log('props favorites', props.favorites)
-
     const displayFavorites = () => {
         return props.favorites.map(character => {
-            return <CharacterCard character={character} />
+            return <CharacterCard 
+                key={ character.id }
+                character={character} 
+            />
         })
     }
 
