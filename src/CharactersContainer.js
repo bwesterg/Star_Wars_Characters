@@ -1,7 +1,6 @@
-import CharacterCard from "./CharacterCard"
+import CharacterCard from "./CharacterCard";
 
 function CharactersContainer(props) {
-
     const displayCharacters = () => {
         return props.characters.map(character => {
             return <CharacterCard 

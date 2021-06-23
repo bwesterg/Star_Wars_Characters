@@ -1,4 +1,4 @@
-import { Component } from 'react'
+import { Component } from 'react';
 import './App.css';
 import FavoritesContainer from './FavoritesContainer';
 import CharactersContainer from './CharactersContainer';
@@ -28,7 +28,6 @@ class App extends Component {
           characters={this.state.characters} 
           addFavorite={this.addFavorite}  
         />
-        
       </div>
     );
   }
