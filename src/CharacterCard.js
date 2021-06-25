@@ -1,16 +1,16 @@
 function CharacterCard(props) {
 
-  const handleClick = () => {
-    if (props.addFavorite) {
-      props.addFavorite(props.character)
-      // props.addFavorite(props.character.id)
-    }
-  }
+  // const handleClick = () => {
+  //   if (props.addFavorite) {
+  //     props.addFavorite(props.character)
+  //     // props.addFavorite(props.character.id)
+  //   }
+  // }
 
     return <div className="character-card">
         <h2>{props.character.name}</h2>
         <img 
-          onClick={handleClick}
+          // onClick={handleClick}
           src={props.character.image} 
           alt={props.character.name}
         />
