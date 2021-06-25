@@ -24,13 +24,23 @@ class App extends Component {
   //   this.setState({favorites: [...this.state.favorites, clickedCharacter] })
   // }
 
+  removeFavorite = (clickedCharacter) => {
+    const remainingFavorites = this.state.favorites.filter(favorite => {
+      return favorite.id !== clickedCharacter.id
+    })
+    this.setState({favorites: remainingFavorites })
+    console.log('remove favorite', clickedCharacter)
+  }
+
   render() {
     return (
       <div className="App">
-        <FavoritesContainer favorites={this.state.favorites}/>
+        <FavoritesContainer 
+          favorites={this.state.favorites}
+          removeFavorite={this.removeFavorite}
+        />
         <CharactersContainer 
           characters={this.state.characters} 
-          // addFavorite={this.addFavorite}  
           addFavorite={this.addFavorite} 
         />
       </div>
