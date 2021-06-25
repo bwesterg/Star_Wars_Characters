@@ -16,9 +16,16 @@ class App extends Component {
       .then(characters => this.setState({ characters: characters }))
   }
 
-  addFavorite = (character) => {
-    console.log('add favorite', character)
-    this.setState({favorites: [...this.state.favorites, character]})
+  addFavorite = (clickedCharacter) => {
+    const oldFavorites = this.state.favorites
+    // console.log('add favorite', character)
+    // this.setState({favorites: [...this.state.favorites, character]})
+    const foundFav = oldFavorites.find(favorite => favorite === clickedCharacter)
+
+    if(!foundFav) {
+      const newFavorites = [...oldFavorites, clickedCharacter]
+      this.setState({ favorites: newFavorites })
+    }
   }
   // addFavorite = clickedCharacter => {
   //   this.setState({favorites: [...this.state.favorites, clickedCharacter] })
