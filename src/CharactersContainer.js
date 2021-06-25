@@ -8,7 +8,7 @@ function CharactersContainer(props) {
                 // key={character}
                 character={character} 
                 // character={character.id} 
-                // addFavorite={props.addFavorite} 
+                addFavorite={props.addFavorite} 
             />
         })
     }

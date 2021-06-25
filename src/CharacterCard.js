@@ -1,4 +1,7 @@
-function CharacterCard(props) {
+// import { render } from '@testing-library/react'
+import { Component } from 'react'
+
+class CharacterCard extends Component {
 
   // const handleClick = () => {
   //   if (props.addFavorite) {
@@ -7,14 +10,22 @@ function CharacterCard(props) {
   //   }
   // }
 
-    return <div className="character-card">
-        <h2>{props.character.name}</h2>
-        <img 
-          // onClick={handleClick}
-          src={props.character.image} 
-          alt={props.character.name}
-        />
-  </div>
+    handleClick = (_) => {
+      this.props.addFavorite(this.props.character)
+      console.log('card clicked', this.props.character)
+    }
+
+    render(){
+      return <div className="character-card">
+          <h2>{this.props.character.name}</h2>
+          <img 
+            // onClick={handleClick}
+            onClick={this.handleClick}
+            src={this.props.character.image} 
+            alt={this.props.character.name}
+          />
+      </div>
+    }
 }
 
 export default CharacterCard
