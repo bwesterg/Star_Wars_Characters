@@ -6,7 +6,7 @@ import CharactersContainer from './CharactersContainer';
 class App extends Component {
 
   state = {
-    favorite: [],
+    favorites: [],
     characters: []
   }
 
