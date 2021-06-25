@@ -3,6 +3,7 @@ function CharacterCard(props) {
   const handleClick = () => {
     if (props.addFavorite) {
       props.addFavorite(props.character)
+      // props.addFavorite(props.character.id)
     }
   }
 
